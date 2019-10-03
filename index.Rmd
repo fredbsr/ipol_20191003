@@ -1,0 +1,55 @@
+---
+title: "Coalition Management in Brazil"
+subtitle: "A dataset"
+author: Frederico Bertholini
+output: ioslides_presentation:
+       logo: logo.jpeg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, eval=F)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+# Como usar
+
+## Baixando dados do dataverse
+
+- Wide (mês/ano)
+```{r }
+# Reading data from dataverse
+data <- get_file("parties_brazil_long.RDS", "doi:10.7910/DVN/9EJGE9")
+CMV8 <- tempfile(fileext = ".RDS")
+writeBin(as.vector(data), CMV8)
+CMV8_longs <- readRDS(CMV8) 
+```
+
+- Longe (partido/mês/ano)
+```{r}
+# Reading data from dataverse
+data <- dataverse::get_file("parties_brazil_long.xlsx", "doi:10.7910/DVN/9EJGE9")
+df_wide <- tempfile(fileext = ".xlsx")
+writeBin(as.vector(data), df_wide)
+CMV8_longs <- readxl::read_xlsx(CMV8) 
+```
+
+## Pronto, 
+
+
