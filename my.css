@@ -10,10 +10,10 @@
 }
 
 
-
 slides > slide:not(.nobackground):before {
   width: 150px;
   height: 32px;
   background-size: 154px 36px;
   margin: 4px 4px;
 }
+

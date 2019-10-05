@@ -4,6 +4,7 @@ subtitle: "a dataset"
 author: Frederico Bertholini
 output: 
   ioslides_presentation:
+       theme: 
        logo: logo.jpeg
 css: my.css       
 ---
@@ -14,7 +15,7 @@ knitr::opts_chunk$set(echo = T, eval=F)
 
 # O que é o dataset?
 
-## Motivações e origens 
+## Motivações e origens
 
 - Custos de Governabilidade (CNPq/FGV)
 
